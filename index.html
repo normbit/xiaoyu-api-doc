@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Mobile API 文档</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -283,12 +283,9 @@
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-e9bde216.js"></script>
 
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -296,12 +293,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-eaea519b.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -309,272 +303,982 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#api" class="toc-h1 toc-link" data-title="API 概述">API 概述</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#api-2" class="toc-h2 toc-link" data-title="API 返回参数">API 返回参数</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#mobile" class="toc-h1 toc-link" data-title="Mobile 版本">Mobile 版本</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#mobile-2" class="toc-h2 toc-link" data-title="Mobile 获得最新版本号">Mobile 获得最新版本号</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#schedule" class="toc-h1 toc-link" data-title="Schedule 课程表">Schedule 课程表</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#schedule-checknew" class="toc-h2 toc-link" data-title="Schedule CheckNew 新课程表查询">Schedule CheckNew 新课程表查询</a>
+                  </li>
+                  <li>
+                    <a href="#schedule-get" class="toc-h2 toc-link" data-title="Schedule Get 获取课表">Schedule Get 获取课表</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#score" class="toc-h1 toc-link" data-title="Score 考试成绩">Score 考试成绩</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#score-overview" class="toc-h2 toc-link" data-title="Score Overview 成绩综览">Score Overview 成绩综览</a>
+                  </li>
+                  <li>
+                    <a href="#exam-group" class="toc-h2 toc-link" data-title="Exam Group 综合考试详情">Exam Group 综合考试详情</a>
+                  </li>
+                  <li>
+                    <a href="#subject-exams" class="toc-h2 toc-link" data-title="Subject Exams 学科考试成绩">Subject Exams 学科考试成绩</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#notice" class="toc-h1 toc-link" data-title="Notice 通知">Notice 通知</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#notice-list" class="toc-h2 toc-link" data-title="Notice List 获取通知列表">Notice List 获取通知列表</a>
+                  </li>
+                  <li>
+                    <a href="#notice-get" class="toc-h2 toc-link" data-title="Notice Get 获取通知详情">Notice Get 获取通知详情</a>
+                  </li>
+                  <li>
+                    <a href="#notice-setread" class="toc-h2 toc-link" data-title="Notice SetRead 发送阅读回执">Notice SetRead 发送阅读回执</a>
+                  </li>
+                  <li>
+                    <a href="#notice-reply" class="toc-h2 toc-link" data-title="Notice Reply 发送回复答案">Notice Reply 发送回复答案</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#status" class="toc-h1 toc-link" data-title="Status 状态代码">Status 状态代码</a>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li>YNXT</li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+        <h1 id='api'>API 概述</h1>
+<p>所有的请求最后一个参数都应该是token，除了登陆并获取token的一个API。</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/&lt;api_url&gt;
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>每一个返回的JSON都应该符合如下格式：</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AOK"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">&lt;API</span><span class="w"> </span><span class="err">数据&gt;</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre></div><h3 id='api-2'>API 返回参数</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>status</td>
+<td>返回状态，使用 <code>HTTP</code> 标准 <a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81">status code</a></td>
+<td>200 表示一切正常，401 表示 token 错误</td>
+</tr>
+<tr>
+<td>message</td>
+<td>对返回状态的解释</td>
+<td>一切正常时，返回 AOK</td>
+</tr>
+<tr>
+<td>token</td>
+<td>新的 token</td>
+<td><code>null</code> 表示不需要更新 token</td>
+</tr>
+<tr>
+<td>data</td>
+<td>API 数据</td>
+<td>无</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>如果没有特殊情况，除 <code>data</code> 外的 API 返回参数大体相同，在之后的 API 描述予以省略。</p>
+<h1 id='mobile'>Mobile 版本</h1><h2 id='mobile-2'>Mobile 获得最新版本号</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># iOS</span>
+curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/mobile/ios/latestVersion
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  <span class="nt">-X</span> DELETE
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="c"># Android</span>
+curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/mobile/android/latestVersion
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>返回值 <code>data</code>：</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+  </span><span class="nl">"latestVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;version&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://&lt;host&gt;/&lt;app type&gt;/&lt;app name&gt;v&lt;version&gt;.&lt;app extension&gt;"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+</span></code></pre></div><h3 id='http'>HTTP 请求</h3>
+<p>iOS：
+<code>GET /api/mobile/ios/latestVersion</code></p>
+
+<p>Android：
+<code>GET /api/mobile/android/latestVersion</code></p>
+<h3 id='api'>API 参数</h3>
+<p>无</p>
+<h3 id='api-2'>API 返回数据</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>参数</th>
+<th>含义</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>latestVersion</td>
+<td>最新版本，整数</td>
+</tr>
+<tr>
+<td>url</td>
+<td>下载地址</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h1 id='schedule'>Schedule 课程表</h1><h2 id='schedule-checknew'>Schedule CheckNew 新课程表查询</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/information/lectureSchedule/checkNew
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">version</span><span class="o">=</span>&lt;current version&gt;
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"hasNew"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http'>HTTP 请求</h3>
+<p><code>GET /api/information/lectureSchedule/checkNew</code></p>
+<h3 id='api'>API 参数</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>token</td>
+<td>api 令牌</td>
+<td>无</td>
+</tr>
+<tr>
+<td>version</td>
+<td>App 中存储的课表版本</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h3 id='api-2'>API 返回数据</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>hasNew</td>
+<td>1 表示有新的课表；0 表示没有</td>
+</tr>
+</tbody></table>
+<h2 id='schedule-get'>Schedule Get 获取课表</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/information/lectureSchedule/get
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"columns"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rows"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"slots"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="nl">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08:30"</span><span class="p">,</span><span class="w"> </span><span class="nl">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:10"</span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="nl">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nl">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:25"</span><span class="p">,</span><span class="w"> </span><span class="nl">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:05"</span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="p">,</span><span class="w">
+      </span><span class="p">{</span><span class="nl">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nl">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15:45"</span><span class="p">,</span><span class="w"> </span><span class="nl">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:25"</span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1297897</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"schedule"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第一节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"体育"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第二节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"数学"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第三节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"心理"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第四节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"地理"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第五节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"信息"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第六节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"英语"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"周一第七节"</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">],</span><span class="w">
+      </span><span class="err">...</span><span class="p">,</span><span class="w">
+      </span><span class="p">[</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-2'>HTTP 请求</h3>
+<p><code>GET /api/information/lectureSchedule/get</code></p>
+<h3 id='api-3'>API 返回数据</h3>
+<ul>
+<li><p><code>columns</code> 课表天数
+5 表示有一周五天的课表，7 表示一周七天</p></li>
+<li><p><code>rows</code> 每天最大课程数
+例如 8</p></li>
+<li><p><code>slots</code> 上课时间表
+是长度为 <code>rows</code> 的列表，列表内元素定义如下：</p></li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>slot</td>
+<td>从 1 到 <code>rows</code> 的整数，表示第几节课</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>上课时间</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>下课时间</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li><p><code>version</code> 返回的课表的版本号
+课程表每次更新时，版本号会严格增大</p></li>
+<li><p><code>schedule</code> 课程详情
+双层列表，第一层长度为 <code>columns</code>，列出每一天的课表，第二层长度为 <code>rows</code>，列出当天的每一节课，列表内元素定义如下：</p></li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>课程名称；无课时返回 &quot;null&quot;</td>
+</tr>
+<tr>
+<td>description</td>
+<td>课程描述，例如“周一第七节”；无课时返回 &quot;null&quot;</td>
+</tr>
+</tbody></table>
+<h1 id='score'>Score 考试成绩</h1><h2 id='score-overview'>Score Overview 成绩综览</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/information/score/overview
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"recent"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"第二单元测验"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-08"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87.5/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"小测验"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">83</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-14"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90.5/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"数学"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"单元测验"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">91</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-12"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"97/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"examGroups"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"examGroupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">123456</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"期中考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-08"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"400/450"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="p">,</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"examGroupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">12357</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"综合考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-08"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"380/450"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"subjects"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subjectId"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"exams"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="p">,</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subjectId"</span><span class="p">:</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"自然"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"exams"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>按照考试日期，返回最近的考试成绩</p>
+<h3 id='http'>HTTP 请求</h3>
+<p><code>GET /api/information/score/overview</code></p>
+<h3 id='api'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token</td>
+<td>api 令牌</td>
+<td>无</td>
+</tr>
+<tr>
+<td>recentCount</td>
+<td>返回最近成绩的数量</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<h3 id='api-2'>API 返回数据</h3>
+<p>返回值分为三部分，每个部分都是一个列表:</p>
+
+<ul>
+<li>最近的单项考试成绩：<code>recent</code></li>
+</ul>
+
+<p><a name="single-exam-json"></a></p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>subject</td>
+<td>科目名称</td>
+</tr>
+<tr>
+<td>name</td>
+<td>考试名称</td>
+</tr>
+<tr>
+<td>date</td>
+<td>考试日期</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>平均分</td>
+</tr>
+<tr>
+<td>median</td>
+<td>中位数</td>
+</tr>
+<tr>
+<td>score</td>
+<td>分数</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>本学期所有综合考试：<code>examGroups</code></li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>examGroupId</td>
+<td>综合考试 ID，用于获取综合考试详情</td>
+</tr>
+<tr>
+<td>name</td>
+<td>综合考试名称</td>
+</tr>
+<tr>
+<td>date</td>
+<td>综合考试中最早的考试日期</td>
+</tr>
+<tr>
+<td>score</td>
+<td>分数和总分</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>本学期所有学科：<code>subjects</code></li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>subjectId</td>
+<td>学科 ID，用于获取学科考试详情</td>
+</tr>
+<tr>
+<td>name</td>
+<td>学科名称</td>
+</tr>
+<tr>
+<td>exams</td>
+<td>考试数量</td>
+</tr>
+</tbody></table>
+<h2 id='exam-group'>Exam Group 综合考试详情</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET http://&lt;host&gt;/api/information/score/examGroupDetail
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">examGroupId</span><span class="o">=</span>&lt;exam group <span class="nb">id</span><span class="o">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"期中考试"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"285/300"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scores"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"语文期中考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-03"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"95/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"数学"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"数学期中考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mf">89.5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-03"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"95/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"英语"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"英语期中考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-04"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"95/100"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-2'>HTTP 请求</h3>
+<p><code>GET /api/information/score/examGroupDetail</code></p>
+<h3 id='api-3'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>examGroupId</td>
+<td>综合考试 ID</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h3 id='api-4'>API 返回数据</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>综合考试名称</td>
+</tr>
+<tr>
+<td>score</td>
+<td>总成绩和总分</td>
+</tr>
+<tr>
+<td>scores</td>
+<td>综合考试中的每项考试，其中的每项考试详情<a href="#single-exam-json">同前</a></td>
+</tr>
+</tbody></table>
+<h2 id='subject-exams'>Subject Exams 学科考试成绩</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET http://&lt;host&gt;/api/information/score/subjectDetail
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">pageSize</span><span class="o">=</span>5
+     <span class="nt">-d</span> <span class="nv">subjectId</span><span class="o">=</span>4
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"数学"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scores"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"期中考试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-03"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mf">91.5</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"95/100"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"第二单元测试"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-12"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mean"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"median"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"97/100"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-3'>HTTP 请求</h3>
+<p><code>GET /api/information/score/subjectDetail</code></p>
+<h3 id='api-5'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pageSize</td>
+<td>返回的考试数量</td>
+<td>30</td>
+</tr>
+<tr>
+<td>subjectId</td>
+<td>学科 ID</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h3 id='api-6'>API 返回值</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>subject</td>
+<td>学科名称</td>
+</tr>
+<tr>
+<td>scores</td>
+<td>学科考试列表，其中的每项考试详情<a href="#single-exam-json">同前</a>，但不包括 <code>subject</code> 科目名称</td>
+</tr>
+</tbody></table>
+<h1 id='notice'>Notice 通知</h1><h2 id='notice-list'>Notice List 获取通知列表</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/notice/list
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">pageSize</span><span class="o">=</span>&lt;page size&gt;
+     <span class="nt">-d</span> <span class="nv">page</span><span class="o">=</span>&lt;page&gt;
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"notices"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知标题"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1463303896</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"noticeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isRead"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知正文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasQuestion"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasReplied"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知标题"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1463302964</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"noticeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isRead"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知正文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasQuestion"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasReplied"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">...</span><span class="p">,</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知标题"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1463302010</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"noticeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isRead"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知正文"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasQuestion"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasReplied"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http'>HTTP 请求</h3>
+<p><code>GET /api/notice/list</code></p>
+<h3 id='api'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pageSize</td>
+<td>每页返回的通知数</td>
+<td>30</td>
+</tr>
+<tr>
+<td>page</td>
+<td>要返回的页数，从 1 开始</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id='api-2'>API 返回数据</h3>
+<p>返回 <code>notices</code>，是长度不超过 <code>pageSize</code> 的列表，列表内元素如下：</p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>通知标题</td>
+</tr>
+<tr>
+<td>time</td>
+<td>通知发出时间，用 UNIX 时间戳表示</td>
+</tr>
+<tr>
+<td>noticeId</td>
+<td>通知 ID；在发送阅读回执和回复时，用来跟踪是哪个通知</td>
+</tr>
+<tr>
+<td>isRead</td>
+<td>是否已读；1 表示已读，0 表示没有</td>
+</tr>
+<tr>
+<td>content</td>
+<td>通知正文</td>
+</tr>
+<tr>
+<td>hasQuestion</td>
+<td>是否附带问题</td>
+</tr>
+<tr>
+<td>hasReplied</td>
+<td>问题是否已经回答</td>
+</tr>
+</tbody></table>
+<h2 id='notice-get'>Notice Get 获取通知详情</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET https://&lt;host&gt;/api/notice/get
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">noticeId</span><span class="o">=</span>&lt;notice <span class="nb">id</span><span class="o">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知标题"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1463303896</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"noticeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"isRead"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"通知正文"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"questions"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"开放问题 1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"minLen"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"maxLen"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"开放问题 2"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"minLen"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"maxLen"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"回答"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选择题 1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"minChoice"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"maxChoice"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"choices"</span><span class="p">:</span><span class="w">
+          </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="nl">"choice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选项 1"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="nl">"choice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选项 2"</span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"selection"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选择题 2"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"minChoice"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"maxChoice"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"choices"</span><span class="p">:</span><span class="w">
+          </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w"> </span><span class="nl">"choice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选项 1"</span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w"> </span><span class="nl">"choice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"选项 2"</span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"selection"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">57</span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-2'>HTTP 请求</h3>
+<p><code>GET /api/notice/get</code></p>
+<h3 id='api-3'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>noticeId</td>
+<td>需要返回的通知 ID</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h3 id='api-4'>API 返回数据</h3>
+<ul>
+<li><code>title</code> 通知标题</li>
+<li><code>time</code> 通知发出时间，用 UNIX 时间戳表示</li>
+<li><code>noticeId</code> 通知 ID；在发送阅读回执和回复时，用来跟踪是哪个通知</li>
+<li><code>isRead</code> 是否已读；1 表示已读，0 表示没有</li>
+<li><code>content</code> 通知正文</li>
+<li><code>questions</code> 通知问题列表</li>
+</ul>
+
+<p>通知问题包括两类：问答题和选择题，由列表元素中的 <code>type</code> 值决定。</p>
+
+<ul>
+<li>问答题（open question）</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>问题 ID（<code>notice_question_id</code>，而非 <code>open_question_id</code>），发送回复时使用</td>
+</tr>
+<tr>
+<td>type</td>
+<td>类型，等于 <code>open</code></td>
+</tr>
+<tr>
+<td>question</td>
+<td>问题描述</td>
+</tr>
+<tr>
+<td>minLen</td>
+<td>最少字符数限制</td>
+</tr>
+<tr>
+<td>maxLen</td>
+<td>最大字符数限制</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>答案，未回复时为 <code>null</code></td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>选择题（choice question）</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>问题 ID（<code>notice_question_id</code>，而非 <code>choice_question_id</code>），发送回复时使用</td>
+</tr>
+<tr>
+<td>type</td>
+<td>类型，等于 <code>choice</code></td>
+</tr>
+<tr>
+<td>question</td>
+<td>问题描述</td>
+</tr>
+<tr>
+<td>minChoice</td>
+<td>最小选择数</td>
+</tr>
+<tr>
+<td>maxChoice</td>
+<td>最大选择数</td>
+</tr>
+<tr>
+<td>choices</td>
+<td>可选项列表，每个元素包含 <code>id</code>（选项 ID）和 <code>choice</code>（选项描述）两个字段</td>
+</tr>
+<tr>
+<td>selection</td>
+<td>选中的选项列表，元素是选项 ID，长度介于 <code>minChoice</code> 和 <code>maxChoice</code> 之间</td>
+</tr>
+</tbody></table>
+<h2 id='notice-setread'>Notice SetRead 发送阅读回执</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST https://&lt;host&gt;/api/notice/setRead
+     <span class="nt">-d</span> <span class="nv">token</span><span class="o">=</span>&lt;api token&gt;
+     <span class="nt">-d</span> <span class="nv">noticeId</span><span class="o">=</span>&lt;notice <span class="nb">id</span><span class="o">&gt;</span>
+     <span class="nt">-d</span> <span class="nv">setRead</span><span class="o">=</span>1
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-3'>HTTP 请求</h3>
+<p><code>POST /api/notice/setRead</code></p>
+<h3 id='api-5'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>noticeId</td>
+<td>通知 ID</td>
+<td>无</td>
+</tr>
+<tr>
+<td>setRead</td>
+<td>要设置的阅读状态；目前不支持将已读设为未读，所以此参数只能是 1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h3 id='api-6'>API 返回数据</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>1 表示操作成功，0 表示失败</td>
+</tr>
+</tbody></table>
+<h2 id='notice-reply'>Notice Reply 发送回复答案</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST https://&lt;host&gt;/api/notice/reply
+     <span class="nt">-d</span> <span class="nv">noticeId</span><span class="o">=</span>&lt;notice <span class="nb">id</span><span class="o">&gt;</span>
+     <span class="nt">-d</span> <span class="nv">q1</span><span class="o">=</span>开放问题1答案
+     <span class="nt">-d</span> <span class="nv">q2</span><span class="o">=</span>开放问题2答案
+     <span class="nt">-d</span> q3[]<span class="o">=</span>37
+     <span class="nt">-d</span> q3[]<span class="o">=</span>47
+     <span class="nt">-d</span> q4[]<span class="o">=</span>57
+     ...
+     <span class="nt">-d</span> q&lt;open question <span class="nb">id</span><span class="o">&gt;=</span>&lt;open question answer&gt;
+     <span class="nt">-d</span> q&lt;choice question <span class="nb">id</span><span class="o">&gt;[]=</span>&lt;choice <span class="nb">id</span><span class="o">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>返回 <code>data</code>：</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-4'>HTTP 请求</h3>
+<p><code>POST /api/notice/reply</code></p>
+<h3 id='api-7'>API 参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>样例</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>noticeId</td>
+<td>通知 ID</td>
+<td>无</td>
+</tr>
+<tr>
+<td>q&lt;id&gt;</td>
+<td>开放问题答案</td>
+<td><code>q1=开放问题1答案</code>，表示 ID 为 <code>1</code> 的开放问题问题的回答</td>
+</tr>
+<tr>
+<td>q&lt;id&gt;[]</td>
+<td>选择题选中的选项 ID</td>
+<td><code>q3[]=37&amp;q3[]=47</code>，表示 ID 为 <code>3</code> 的选择题选择 ID 为 <code>3</code> 和 <code>4</code> 的选项</td>
+</tr>
+</tbody></table>
+<h3 id='api-8'>API 返回数据</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>1 表示操作成功，0 表示失败</td>
+</tr>
+</tbody></table>
+<h1 id='status'>Status 状态代码</h1>
+<p>返回 <code>status</code> 使用以下状态代码：</p>
+
+<table><thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>一切正常</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>API 令牌错误</td>
 </tr>
 </tbody></table>
 
@@ -582,9 +1286,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
